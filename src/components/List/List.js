@@ -1,15 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router';
 
+
+import './list.css';
 
 const List = props => {
     const users = props.users;
     return (
         <div>
-            <ul>
+            <ul className="list-group left-menu">
                 {
                     users.map(user => (
                         <li key={user.id}>
-                            <a href={`/${user.id}`}>{user.name}</a>
+                            <Link className="list-group-item" to={`/${user.id}`}>{user.name}</Link>
                         </li>
                     ))
                 }

@@ -1,0 +1,4 @@
+.active {
+    background-color: #999;
+    transition: background-color .2s;
+}
