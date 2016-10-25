@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-
+//import Details from './../Details/Details';
 
 import './list.css';
 
@@ -12,11 +12,12 @@ const List = props => {
                 {
                     users.map(user => (
                         <li key={user.id}>
-                            <Link className="list-group-item" to={`/${user.id}`}>{user.name}</Link>
+                            <Link className="list-group-item" to={`/users/${user.id}`}>{user.name}</Link>
                         </li>
                     ))
                 }
             </ul>
+            
         </div>
     )
 };
